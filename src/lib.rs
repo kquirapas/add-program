@@ -44,8 +44,8 @@ pub fn process_instruction(
     match instruction {
         // Accounts
         //
-        // 1. Payer
-        // 2. State
+        // 1. State
+        // 2. Payer
         // 3. System Program (A program in Solana, is an account)
         ProgramInstruction::Initialize => {
             let accounts_iter = &mut accounts.iter();
@@ -153,8 +153,8 @@ mod tests {
                     program_id,
                     // Accounts
                     //
-                    // 1. Payer
-                    // 2. State
+                    // 1. State
+                    // 2. Payer
                     // 3. System Program (A program in Solana, is an account)
                     accounts: vec![
                         AccountMeta::new(state_pda, false),
@@ -167,8 +167,8 @@ mod tests {
                     program_id,
                     // Accounts
                     //
-                    // 1. State
-                    // 2. Payer
+                    // 1. Payer
+                    // 2. State
                     accounts: vec![
                         AccountMeta::new(ctx.payer.pubkey(), true),
                         AccountMeta::new(state_pda, false),
